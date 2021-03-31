@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set Environment Variables
+        id: set_github_env
+        run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.1
         with:
@@ -34,5 +37,5 @@ jobs:
           commit-message: 'Store Appstore Info'
           force-add: 'true'
           files: store.db
-          name: Fernando
-          email: techin.park@daum.net
+          name: Aros Daddy
+          email: arosdaddy@gmail.com
